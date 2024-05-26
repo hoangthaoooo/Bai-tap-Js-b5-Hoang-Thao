@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập js buổi 5</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <div class="baitap-js-buoi-5 mt-5" style="width: 65%; margin:  auto;">
+        <!-- Bài 1: Tính điểm tuyển sinh -->
+        <div class="container bai-tap rounded p-3">
+            <h3 class="text-light text-center my-3">Bài 1: Tính điểm tuyển sinh</h3>
+            <div class="my-3 text-center" style="width: 65%; margin:  auto;">
+                <div class="row bg-danger-subtle fs-5 fw-bold">
+                    <div class="col-md-6 border border-light border-2 p-1">Khu vực</div>
+                    <div class="col-md-6 border border-light border-2 p-1">Đối tượng</div>
+                </div>
+                <div class="row bg-success-subtle">
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">A</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">B</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">C</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">1</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">2</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">3</div>
+                </div>
+                <div class="row bg-danger-subtle">
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">2</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">1</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">0.5</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">2.5</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">1.5</div>
+                    <div class="col-md-2 border border-light border-2 p-1 fs-5 fw-medium">1</div>
+                </div>
+            </div>
+            <div class="container d-flex my-3 justify-content-between">
+                <input type="number" class="form-control w-25 me-3" placeholder="Điểm chuẩn" id="diemChuan"></input>
+                <select class="select form-select w-25 me-3" id="khuVuc">
+                    <option>Chọn khu vực</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                <select class="select form-select w-25" id="doiTuong">
+                    <option>Chọn đối tượng</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="container d-flex justify-content-between">
+                <input type="number" class="form-control w-25 me-3" placeholder="Môn thứ 1" id="mon1"></input>
+                <input type="number" class="form-control w-25 me-3" placeholder="Môn thứ 2" id="mon2"></input>
+                <input type="number" class="form-control w-25" placeholder="Môn thứ 3" id="mon3"></input>
+            </div>
+            <button class="btn btn-danger rounded-5 px-5 m-3" id="ketQua">Kết quả</button>
+            <div class="alert alert-danger p-3 mx-2 fs-4" id="thongBaoKq">
+                <i class="fa fa-caret-right text-danger fs-4"></i>
+                <i class="fs-5 text-danger">Xin vui lòng nhập đầy đủ thông tin để xem kết quả !</i>
+            </div>
+        </div>
+        <!-- Bài 2: Tính tiền điện -->
+        <div class="container rounded p-3 bai-tap my-3">
+            <h3 class="text-light text-center my-3">Bài 2: Tính tiền điện</h3>
+            <div class="container my-3 text-center">
+                <div class="row bg-danger-subtle fw-bold">
+                    <div class="col border border-white py-1">50Kw đầu tiên</div>
+                    <div class="col border border-white py-1">50Kw tiếp theo</div>
+                    <div class="col border border-white py-1">100Kw tiếp theo</div>
+                    <div class="col border border-white py-1">150Kw tiếp theo</div>
+                    <div class="col border border-white py-1">Từ 350Kw trở lên</div>
+                </div>
+                <div class="row bg-white fw-bold">
+                    <div class="col border border-danger-subtle py-1">500đ/Kw</div>
+                    <div class="col border border-danger-subtle py-1">650đ/Kw</div>
+                    <div class="col border border-danger-subtle py-1">850đ/Kw</div>
+                    <div class="col border border-danger-subtle py-1">1100đ/Kw</div>
+                    <div class="col border border-danger-subtle py-1">1300đ/Kw</div>
+                </div>
+            </div>
+            <input type="number" class="form-control w-25 d-inline me-2" placeholder="Nhập số Kw điện tiêu thụ"
+                id="soDien"><span class="fs-5 text-white">Đơn vị (KW)</span>
+            <br>
+            <button class="btn btn-danger rounded-5 px-5 my-3" id="ketQuaDien">Tính tiền điện</button>
+            <div class="alert alert-danger p-3 mx-2 fs-4" id="thongBaoTienDien">
+                <i class="fa fa-caret-right text-danger fs-4"></i>
+                <i class="fs-5 text-danger">Xin vui lòng nhập số Kw điện tiêu thụ để xem tổng số tiền !</i>
+            </div>
+        </div>
+        <!-- Bài 3: Tính thuế thu nhập cá nhân -->
+        <div class="container rounded p-3 bai-tap my-3">
+            <h3 class="text-light text-center my-3">Bài 3: Tính thuế thu nhập cá nhân</h3>
+            <h5 class="text-dark bg-danger-subtle p-2 rounded mx-2">Thu nhập chịu thuế = Tổng thu nhập - 4 triệu - (số
+                người phụ thuộc*1.6 triệu)</h5>
+            <div class="bang-quy-dinh-thue my-3 fs-5" style="width: 65%; margin: 0 auto;">
+                <div class="row text-center">
+                    <div class="col-md-8 bg-danger-subtle py-2 fw-bold border border-white">Thu nhập chịu thuế (Triệu)
+                    </div>
+                    <div class="col-md-4 bg-danger-subtle py-2 fw-bold border border-white">Thuế xuất (%)</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Đến 60</div>
+                    <div class="col-md-4 bg-white border border-danger">5</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 60 đến 120</div>
+                    <div class="col-md-4 bg-white border border-danger py-1">10</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 120 đến 210</div>
+                    <div class="col-md-4 bg-white border border-danger py-1">15</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 210 đến 384</div>
+                    <div class="col-md-4 bg-white border border-danger py-1">20</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 384 đến 624</div>
+                    <div class="col-md-4 bg-white border border-danger py-1">25</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 624 đến 960</div>
+                    <div class="col-md-4 bg-white border border-danger py-1">30</div>
+                    <div class="col-md-8 bg-white border border-danger py-1">Trên 960</div>
+                    <div class="col-md-4 bg-white border border-danger">35</div>
+                </div>
+            </div>
+            <div class="thong-tin d-flex justify-content-around">
+                <input type="text" class="form-control me-4" placeholder="Nhập họ và tên" id="hoTen">
+                <input type="number" class="form-control me-4" placeholder="Nhập tổng thu nhập năm" id="tongThuNhapNam">
+                <input type="number" class="form-control " placeholder="Nhập số người phụ thuộc" id="soNguoiPhuThuoc">
+            </div>
+            <button class="btn btn-danger rounded-5 px-5 my-3" id="tinhThue">Tính thuế thu nhập cá nhân</button>
+            <div class="alert alert-danger p-3 mx-2 fs-4" id="thongBaoTienThue">
+                <i class="fa fa-caret-right text-danger fs-4"></i>
+                <i class="fs-5 text-danger">Xin vui lòng nhập thông tin để tính tiền thuế !</i>
+            </div>
+        </div>
+        <!--Bài 4: Tính tiền cáp-->
+        <div class="container rounded p-3 bai-tap mt-3" style="margin-bottom: 200px;">
+            <h3 class="text-light text-center my-3">Bài 4: Tính tiền cáp</h3>
+            <div class="phan-loai bg-danger-subtle p-4 fs-5 rounded w-75 m-auto">
+                <p class="mb-0 fw-bold">1. Nhà dân</p>
+                <ul>
+                    <li>Phí xử lý hóa đơn: $4.5.</li>
+                    <li>Phí dịch vụ cơ bản: $20.5.</li>
+                    <li>Thuê kênh cao cấp: $7.5 / Kênh.</li>
+                </ul>
+                <p class="mb-0 fw-bold">2. Doanh nghiệp</p>
+                <ul class="mb-0">
+                    <li>Phí xử lý hóa đơn: $15</li>
+                    <li>Phí dịch vụ cơ bản: $75 cho gói mặc định cho số kết nối từ 10 trở xuống, từ 11 trở lên được tính
+                        thêm $5 / Kết nối.</li>
+                    <li>Thuê kênh cao cấp: $50 / Kênh.</li>
+                </ul>
+            </div>
+            <div class="bg-danger-subtle p-4 fs-5 rounded w-75 m-auto mt-2">
+                <p class="mb-0 fw-bold">Tổng tiền cáp = Phí xử xý hóa đơn + Phí dịch vụ cơ bản + Thuê kênh cao cấp</p>
+            </div>
+            <div class="bg-danger-subtle p-4 fs-5 rounded w-75 m-auto my-4">
+                <select class="form-select mt-3" id="loaiKh" onchange="phanLoaiKh()">
+                    <option>--Chọn loại khách hàng--</option>
+                    <option value="doanh nghiệp">Doanh nghiệp</option>
+                    <option value="nhà dân">Nhà dân</option>
+                </select>
+                <input type="text" id="maKh" class="form-control mt-3" placeholder="Nhập mã khách hàng">
+                <input type="number" id="soKenhCc" class="form-control mt-3" placeholder="Nhập số kênh cao cấp">
+                <input type="number" id="soKetNoi" class="form-control mt-3" placeholder="Nhập số kết nối" style="display: none;">
+                <button class="btn btn-danger rounded-5 px-5 my-3" id="tinhTienCap">Tính tiền cáp</button>
+                <div class="alert alert-light p-3 mx-2 fs-4" id="thongBaoTienCap">
+                    <i class="fa fa-caret-right text-danger fs-4"></i>
+                    <i class="fs-5 text-danger">Xin vui lòng nhập thông tin để tính tiền cáp</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--Main Js-->
+    <script src="/main.js"></script>
+</body>
+
+</html>
